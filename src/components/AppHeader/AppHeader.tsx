@@ -1,12 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AppHeaderStyles from "./AppHeader.module.scss";
 
-function App() {
+function AppHeader() {
   return (
-    <div className="App">
+    <div className={AppHeaderStyles.body_wrapper}>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -23,4 +21,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppHeader;

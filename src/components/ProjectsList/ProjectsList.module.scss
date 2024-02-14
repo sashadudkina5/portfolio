@@ -1,0 +1,27 @@
+@import "../../styles-utils/mixins.scss";
+
+.project_list {
+    @include list-styles;
+
+    @include flex-container(row, center, center, 70px, 10px);
+    flex-wrap: wrap;
+}
+
+.title {
+    margin: 0;
+
+    @include respond-to('desktop') {
+        font-size: 88px;
+        margin-bottom: 80px;
+      }
+    
+      @include respond-to('tablet') {
+        font-size: 72px;
+        margin-bottom: 60px;
+      }
+    
+      @include respond-to('mobile') {
+        font-size: 40px;
+        margin-bottom: 40px;
+      }
+}

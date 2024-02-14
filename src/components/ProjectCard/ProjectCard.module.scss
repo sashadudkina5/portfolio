@@ -1,0 +1,76 @@
+@import "../../styles-utils/variables.scss";
+@import "../../styles-utils/mixins.scss";
+
+.card {
+  overflow: hidden;
+
+  &:hover .imageContainer {
+    transform: scale(1.1);
+  }
+}
+
+.imageContainer {
+    display: block;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%; 
+  
+    img {
+      width: 100%; 
+      height: auto;
+    }
+  }
+
+.imageCoverWrapper {
+  position: relative;
+  height: auto;
+  width: 546px;
+  overflow: hidden;
+
+  @include respond-to('tablet') {
+    width: 345px;
+  }
+
+  @include respond-to('mobile') {
+    width: 345px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  @include flex-container(row, center, center, 0, 0);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  color: $main-font-color;
+}
+
+.links {
+  @include flex-container(column, center, center, 48px, 0);
+  font-weight: 800;
+
+  a {
+    color: $main-font-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 24px;
+    border-bottom: 4px solid $decoraion-theme-color;
+    padding-bottom: 10px;
+
+    &:hover {
+      color: $decoraion-theme-color
+    }
+  }
+}
+
+.show {
+  opacity: 1;
+  pointer-events: auto;
+}
