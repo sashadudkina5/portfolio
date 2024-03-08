@@ -1,6 +1,31 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What's Inside:
+
+- **Contact Information**
+- **Career Summary**
+- **Projects**
+- **Skills Showcase**
+
+## Tech Stack
+
+- **TypeScript**
+- **HTML & SCSS**
+- **React.js**
+
+## Plans
+
+- **Multilingual Support:** While I'm starting with English, I'll be expanding to include Russian too. Toggle between languages seamlessly using Redux Toolkit. 
+- **Advanced SCSS:** I'm diving deep into SCSS, exploring mixins, functions, placeholders, and more for a streamlined development process.
+- **Accessibility & Cross-Browser Compatibility:** Ensuring everyone can access and enjoy the site, no matter their device or browser.
+- **Adaptive design:** The website is built to ensure full adaptability across various screen sizes - on desktops, tablets, and smartphones.
+- **URL Language Parameters:** Language parameters will be added to the URL, along with anchors, to display the required section and language based on the URL. This functionality will be implemented using the useParams hook.
+
+## Development Process
+
+- **Branch Management:** Current changes are in "branch1", while only milestone-ready versions will make it to the "master" branch.
+- **Documentation:** The project will be documented with JSDoc.
+
 
 ## Available Scripts
 
