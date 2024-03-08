@@ -3,6 +3,7 @@
 
 .card {
   overflow: hidden;
+  max-width: 100%;
 
   &:hover .imageContainer {
     transform: scale(1.1);
@@ -25,16 +26,8 @@
 .imageCoverWrapper {
   position: relative;
   height: auto;
-  width: 546px;
+  width: auto;
   overflow: hidden;
-
-  @include respond-to('tablet') {
-    width: 345px;
-  }
-
-  @include respond-to('mobile') {
-    width: 345px;
-  }
 }
 
 .overlay {
@@ -44,7 +37,9 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  @include flex-container(row, center, center, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -52,14 +47,18 @@
 }
 
 .links {
-  @include flex-container(column, center, center, 48px, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2.5rem;
   font-weight: 800;
 
   a {
     color: $main-font-color;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 120%;
     line-height: 24px;
     border-bottom: 4px solid $decoraion-theme-color;
     padding-bottom: 10px;

@@ -22,13 +22,3 @@
   margin: 0;
   padding: 0;
 }
-
-// Mixin for setting up a flex container
-@mixin flex-container($flex-direction: row, $justify-content: flex-start, $align-items: stretch, $row-gap: 50px, $column-gap: 100px) {
-    display: flex;
-    flex-direction: $flex-direction;
-    justify-content: $justify-content;
-    align-items: $align-items;
-    row-gap: $row-gap;
-    column-gap: $column-gap;
-  }
