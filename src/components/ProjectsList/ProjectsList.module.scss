@@ -1,0 +1,47 @@
+@import "../../styles-utils/mixins.scss";
+
+.projects_section {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.project_list {
+    @include list-styles;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @include respond-to('tablet') {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    @include respond-to('mobile') {
+      grid-template-columns: 1fr;
+    }
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 70px;
+    column-gap: 20px;
+}
+
+.projects_item {
+  flex-grow: 1;
+}
+
+.title {
+    margin: 0;
+
+    @include respond-to('desktop') {
+        font-size: 88px;
+        margin-bottom: 80px;
+      }
+    
+      @include respond-to('tablet') {
+        font-size: 72px;
+        margin-bottom: 60px;
+      }
+    
+      @include respond-to('mobile') {
+        font-size: 40px;
+        margin-bottom: 40px;
+      }
+}
